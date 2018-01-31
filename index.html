@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="robots"
+          content="nofollow" />
+    <title>Iris McDonald HW7A</title>
+</head>
+<body>
+    <h2>JavaScript Function HW7A </h2>
+
+    <p>This example calls a function which performs a for loop with an imbedded if and else</p>
+
+    <script>
+        function startProcess() {
+            for (var i = 1; i <= 10; i++) {
+                var length = i + 2;
+                var width = i + 3;
+                var height = i + 4;
+                document.write('<br>');
+                var myVolume = getVolume(length, width, height);
+                if (myVolume >= 60 && myVolume <= 70) {
+                    document.write( 'Small Volume: ' + myVolume);
+                } else if (myVolume > 70 && myVolume <= 80) {
+                    document.write('Medium Volume: ' + myVolume);
+                } else if (myVolume > 80 && myVolume <= 90) {
+                    document.write('Large Volume: ' + myVolume)
+                } else if (myVolume > 90 && myVolume <= 100) {
+                    document.write('Extra Large Volume: ' + myVolume);
+                }
+                else {
+                    document.write("Can't determine size: " + myVolume);
+                }
+            }
+        }
+
+        function getVolume(length, width, height) {
+            var result = length * width * height;
+            return result;
+        }
+
+        startProcess();
+
+    </script>
+</body>
+</html>
+
